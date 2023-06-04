@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <script src="game.js"></script>
+
+        <title id="title">Cookie Clicker</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta charset="UTF-8">
+        </meta>
+
+        <style>
+            body {
+    margin: 0;
+    padding: 0;
+    background-image: url(images/background.jpg);
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+    overflow: overlay;
+}
+
+.Header {
+    text-align: center;
+    font-family: Arial;
+    font-size: 250%;
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+
+.text {
+    text-align: center;
+    font-family: Arial;
+    font-size: 175%;
+    margin-top: 5px;
+}
+
+#CookieDiv {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#Cookie {
+    width: 25vw;
+    max-width: 512px;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+#cookieTextDiv {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    z-index: 20;
+}
+
+#CookieText, #CPS {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(194, 55, 0);
+}
+
+#Cookie:hover {
+    transition: 0.5s;
+    filter: drop-shadow(0 0 5px black);
+}
+
+#Upgrades, #MouseUpgrades {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 5px solid #555;
+    border-radius: 5px;
+    margin: 5px;
+    width: fit-content;
+    display: inline-block;
+    transition: 0.5s;
+    position: static;
+}
+
+#MouseUpgrades {
+    position: absolute;
+}
+
+#all-upgrades img, #all-mouseUpgrades img {
+    width: 3vw;
+    max-width: 75px;
+}
+
+#all-upgrades h2, #all-mouseUpgrades h2 {
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.button {
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+    width: fit-content;
+    margin: 0;
+    padding: 5px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.button:hover {
+    background-color: white;
+    color: #333;
+    filter: drop-shadow(0 0 3px black);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial;
+}
+
+button {
+    cursor: pointer;
+}
+        </style>
+    </head>
+
+    <body onload="onBodyLoad()">
+        <div>
+            <p class="Header">Coockie Clicker</p>
+            <p class="text">Press the cookie to get coockies!!!</p>
+        </div>
+
+        <div id="CookieDiv">
+            <img draggable="false" id="Cookie" src="images/cookie.png">
+
+        </div>
+        <div id="cookieTextDiv">
+            <p id="CookieText" class="text" style="margin-bottom: 0;">Cookies: 0</p>
+            <h4 id="CPS">Clicks Per Second: 0</h4>
+        </div>
+
+        <div id="Upgrades">
+            <div id="all-upgrades"></div>
+        </div>
+
+        <div id="MouseUpgrades">
+            <div id="all-mouseUpgrades"></div>
+        </div>
+    </body>
+</html>
